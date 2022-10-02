@@ -1,4 +1,4 @@
-import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
+import { MaterialFontAwesomeIcon } from 'src/app/shared/models/icon.interface';
 
 export interface SideNav {
   label: string;
@@ -7,9 +7,7 @@ export interface SideNav {
   active?: boolean;
 }
 
-export interface SideNavSocial {
-  iconPrefix: IconPrefix;
-  iconName: IconName;
+export interface SideNavSocial extends MaterialFontAwesomeIcon {
   tooltip: string;
   link: string;
 }

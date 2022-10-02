@@ -15,18 +15,21 @@ export class SidebarComponent implements OnInit {
   socialIcons: Array<SideNavSocial> = [
     {
       iconPrefix: 'fab',
+      iconType: 'font-awesome',
       iconName: 'github-alt',
       tooltip: 'Github',
       link: '#',
     },
     {
       iconPrefix: 'fab',
+      iconType: 'font-awesome',
       iconName: 'facebook-f',
       tooltip: 'Facebook',
       link: '#',
     },
     {
       iconPrefix: 'fab',
+      iconType: 'font-awesome',
       iconName: 'linkedin-in',
       tooltip: 'Linked In',
       link: '#',
