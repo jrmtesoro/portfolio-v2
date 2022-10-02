@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingModule } from './landing.module';
+import { LandingComponent } from './landing.component';
 
-const routes: Routes = [{ path: '', component: LandingModule }];
+const routes: Routes = [{ path: '', component: LandingComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

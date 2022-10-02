@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { FULL_NAME } from 'src/app/core/constants/personal-info';
 
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.scss']
+  styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent implements OnInit {
+  fullName = FULL_NAME;
+  description = `I'm a software engineer specialised in frontend and backend development 
+  for complex scalable web apps. I write about software development on my blog. 
+  Want to know how I may help your project? Check out my project portfolio and online resume.`;
 
-  constructor() { }
+  aboutMeImg = '../../../assets/images/about-me.jpg';
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
