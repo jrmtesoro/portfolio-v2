@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/settings/variables.scss";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.custom-tooltip {
+  background-color: var(--secondary);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
