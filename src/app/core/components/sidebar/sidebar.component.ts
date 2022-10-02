@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FULL_NAME } from '../../constants/personal-info';
+import { FULL_NAME, POSITION } from '../../constants/personal-info';
 import { SideNav, SideNavSocial } from '../../models/sidenav.interface';
 
 @Component({
@@ -9,7 +9,7 @@ import { SideNav, SideNavSocial } from '../../models/sidenav.interface';
 })
 export class SidebarComponent implements OnInit {
   fullName = FULL_NAME;
-  description = `Hi, my name is ${FULL_NAME} and I'm a Full-stack developer. Welcome to my personal website!`;
+  description = `Hi, my name is ${FULL_NAME} and I'm a ${POSITION}. Welcome to my personal website!`;
   profilePicture = '../../../assets/images/profile.jpeg';
 
   socialIcons: Array<SideNavSocial> = [
