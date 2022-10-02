@@ -1,0 +1,136 @@
+.drawer-container {
+  height: 100vh;
+}
+
+.drawer-sidenav {
+  background-color: var(--primary);
+  width: 280px;
+}
+
+.sidenav-container {
+  padding: 1.5rem 1rem;
+}
+
+.profile-container {
+  text-align: center;
+  color: var(--light);
+
+  h3 {
+    padding-top: 0.5rem;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  img {
+    margin-top: 0.7rem;
+    max-width: 160px;
+    border-radius: 50%;
+    height: 160px;
+  }
+
+  p {
+    margin-top: 1rem;
+    line-height: 22px;
+  }
+
+  mat-divider {
+    margin: 1.5rem 0.5rem 1rem;
+    border-color: rgba(255, 255, 255, 0.3);
+    // border-color: var(--light);
+  }
+}
+
+.social-container {
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  .social-icon {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--light);
+    cursor: pointer;
+
+    fa-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      font-size: 16px;
+      color: var(--primary);
+    }
+  }
+
+  .social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+.navigation-container {
+  margin: 0;
+  padding: 0 2.5rem;
+  list-style: none;
+
+  .navigation-item {
+    padding: 0.6rem 0.3rem;
+    cursor: pointer;
+
+    .navigation-link {
+      display: flex;
+      align-items: flex-end;
+
+      h5 {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+        letter-spacing: 0.09em;
+      }
+
+      mat-icon {
+        margin-right: 0.6rem;
+        font-size: 22px;
+
+        height: unset;
+        width: unset;
+      }
+    }
+  }
+
+  .nav-active {
+    h5,
+    mat-icon {
+      color: var(--primary2) !important;
+      font-weight: 700 !important;
+    }
+  }
+
+  .nav-inactive {
+    h5,
+    mat-icon {
+      color: var(--medium) !important;
+    }
+  }
+
+  .navigation-item:hover {
+    .nav-inactive {
+      h5,
+      mat-icon {
+        color: #fff !important;
+      }
+    }
+
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+  }
+}
