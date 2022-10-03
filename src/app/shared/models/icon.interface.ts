@@ -1,9 +1,16 @@
 import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
+import { PortfolioColor } from './colors.interface';
 
-type IconType = 'material' | 'font-awesome';
-
-export interface MaterialFontAwesomeIcon {
-  iconType: IconType;
-  iconName: IconName;
-  iconPrefix?: IconPrefix;
+export interface PortfolioMaterialIcon {
+  type: 'material';
+  name: string;
 }
+
+export interface PortfolioFontAwesomeIcon {
+  type: 'font-awesome';
+  prefix: IconPrefix;
+  name: IconName;
+  color?: PortfolioColor | string;
+}
+
+export type PortfolioIcon = PortfolioMaterialIcon | PortfolioFontAwesomeIcon;
