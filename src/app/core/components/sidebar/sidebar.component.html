@@ -6,29 +6,18 @@
                 <img [src]="profilePicture" class="mat-elevation-z2">
                 <p>{{ description }}</p>
                 <div class="social-container">
-                    <ng-container *ngFor="let social of socialIcons">
-                        <div class="social-icon mat-elevation-z1" [matTooltip]="social.tooltip"
-                            matTooltipClass="custom-tooltip">
-                            <fa-icon [icon]="[social.iconPrefix, social.iconName]"></fa-icon>
-                        </div>
+                    <ng-container *ngFor="let socialIcon of socialIcons">
+                        <app-social-icon [socialIcon]="socialIcon"></app-social-icon>
                     </ng-container>
                 </div>
-                <mat-divider></mat-divider>
+
             </div>
-            <ul class="navigation-container">
-                <ng-container *ngFor="let navigation of navigations">
-                    <li class="navigation-item">
-                        <div class="navigation-link" [ngClass]="{
-                            'nav-inactive': !navigation.active,
-                            'nav-active': navigation.active
-                        }" [matTooltipDisabled]="navigation.active" [matTooltip]="navigation.tooltip"
-                            matTooltipPosition="after" matTooltipClass="custom-tooltip">
-                            <mat-icon>{{ navigation.icon }}</mat-icon>
-                            <h5>{{ navigation.label }}</h5>
-                        </div>
-                    </li>
-                </ng-container>
-            </ul>
+            <mat-divider></mat-divider>
+            <app-navigation></app-navigation>
+            <mat-divider></mat-divider>
+            <div class="contact-me-container">
+                <app-button [button]="contactMeBtn"></app-button>
+            </div>
         </div>
     </mat-drawer>
     <ng-content selector="drawerContent"></ng-content>

@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FULL_NAME, POSITION } from '../../constants/personal-info';
-import { SideNav, SideNavSocial } from '../../models/sidenav.interface';
+
+import { SocialIcon } from 'src/app/shared/models/social-icon.interface';
+
+import { FULL_NAME, POSITION } from '../../constants/personal-info.constant';
+import { PortfolioButton } from 'src/app/shared/models/button.interface';
+import { SOCIAL_ICONS } from '../../constants/sidebar.constant';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,61 +16,19 @@ export class SidebarComponent implements OnInit {
   description = `Hi, my name is ${FULL_NAME} and I'm a ${POSITION}. Welcome to my personal website!`;
   profilePicture = '../../../assets/images/profile.jpeg';
 
-  socialIcons: Array<SideNavSocial> = [
-    {
-      iconPrefix: 'fab',
-      iconType: 'font-awesome',
-      iconName: 'github-alt',
-      tooltip: 'Github',
-      link: '#',
-    },
-    {
-      iconPrefix: 'fab',
-      iconType: 'font-awesome',
-      iconName: 'facebook-f',
-      tooltip: 'Facebook',
-      link: '#',
-    },
-    {
-      iconPrefix: 'fab',
-      iconType: 'font-awesome',
-      iconName: 'linkedin-in',
-      tooltip: 'Linked In',
-      link: '#',
-    },
-  ];
+  socialIcons: Array<SocialIcon> = SOCIAL_ICONS;
 
-  navigations: Array<SideNav> = [
-    {
-      label: 'About Me',
-      icon: 'person',
-      active: true,
-      tooltip: 'Know more about me',
+  contactMeBtn: PortfolioButton = {
+    label: 'Contact Me',
+    icon: {
+      type: 'material',
+      name: 'mail',
     },
-    {
-      label: 'Portfolio',
-      icon: 'integration_instructions',
-      tooltip: 'Learn about my projects',
-    },
-    {
-      label: 'Resume',
-      icon: 'description',
-      tooltip: 'View my resume',
-    },
-    {
-      label: 'Contact',
-      icon: 'contact_mail',
-      tooltip: 'Contact me',
-    },
-  ];
+    btnColor: 'secondary',
+    labelColor: 'light',
+  };
 
-  activeNavigation?: SideNav;
-
-  constructor() {
-    this.activeNavigation = this.navigations.find(
-      (navigation) => navigation.active
-    );
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }
