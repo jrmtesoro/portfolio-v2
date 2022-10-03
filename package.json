@@ -25,6 +25,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "ngx-router-animations": "^13.0.0",
     "primeflex": "^3.2.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
