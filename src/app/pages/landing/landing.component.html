@@ -1,19 +1,7 @@
 <app-layout>
     <ng-container #content>
-        <section class="about-me-container py-7 px-6 lg:px-7">
-            <div class="grid">
-                <div class="col-7">
-                    <div>
-                        <h1>{{ fullName | titlecase }}</h1>
-                        <h4 class="mt-5">{{ position | titlecase }}</h4>
-                        <p class="mt-4" [innerHtml]="description"></p>
-                    </div>
-                </div>
-                <div class="col-5"><img [src]="aboutMeImg"></div>
-            </div>
-        </section>
-        <section class="about-me-container">
-
-        </section>
+        <div [@animationTranstion]="getState(o)">
+            <router-outlet class="router-wrapper" #o="outlet"></router-outlet>
+        </div>
     </ng-container>
 </app-layout>
