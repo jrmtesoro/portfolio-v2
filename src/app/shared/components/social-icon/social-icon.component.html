@@ -1,0 +1,9 @@
+<div class="social-icon mat-elevation-z1" [matTooltip]="socialIcon.tooltip" matTooltipClass="custom-tooltip">
+    <ng-container *ngIf="socialIcon.icon.type === 'material'">
+        <mat-icon>{{ socialIcon.icon.name }}</mat-icon>
+    </ng-container>
+
+    <ng-container *ngIf="socialIcon.icon.type === 'font-awesome'">
+        <fa-icon [icon]="[socialIcon.icon.prefix || 'fas', socialIcon.icon.name]"></fa-icon>
+    </ng-container>
+</div>
