@@ -1,0 +1,18 @@
+<button mat-flat-button [ngStyle]="{
+        'background-color': buttonColor || 'var(--primary)',
+        'color': textColor || 'var(--light)'
+    }">
+    <div class="portfolio-button">
+        <span class="mr-2">
+            <ng-container *ngIf="button.icon.type === 'material'">
+                <mat-icon>{{ button.icon.name }}</mat-icon>
+            </ng-container>
+
+            <ng-container *ngIf="button.icon.type === 'font-awesome'">
+                <fa-icon [icon]="[button.icon.prefix || 'fas', button.icon.name]"></fa-icon>
+            </ng-container>
+        </span>
+        <span class="button-label">{{ button.label }}</span>
+    </div>
+
+</button>
