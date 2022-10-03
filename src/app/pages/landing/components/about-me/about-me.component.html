@@ -1,0 +1,38 @@
+<section class="about-me-container pt-8 pb-6 px-7 md:px-8">
+    <div class="grid grid-nogutter mx-0 md:mx-0 lg:mx-0 xl:mx-8">
+        <div class="col-7">
+            <h1>{{ fullName | titlecase }}</h1>
+            <h4 class="mt-5">{{ position | titlecase }}</h4>
+            <p class="section-description mt-4">{{ aboutMeDescription }}</p>
+            <div class="about-me-buttons mt-4">
+                <ng-container *ngFor="let button of buttons">
+                    <app-button [button]="button"></app-button>
+                </ng-container>
+            </div>
+        </div>
+        <div class="col-5"><img style="width: 800px; height: 330px;" [src]="aboutMeImg"></div>
+    </div>
+</section>
+<section class="what-i-do-container py-6 px-7 md:px-8">
+    <div class="mx-0 md:mx-0 lg:mx-0 xl:mx-8">
+        <h4 class="section-title">What I do</h4>
+        <p class="section-description mt-4">{{ whatIDoDescription }}</p>
+        <div class="grid grid-nogutter mt-6">
+            <ng-container *ngFor="let card of skillCards">
+                <div class="col-3">
+                    <div class="skill-card-container">
+                        <div class="skill-icons-container">
+                            <ng-container *ngFor="let icon of card.headerIcons">
+                                <fa-icon [ngStyle]="{
+                                        color: icon.color
+                                    }" [icon]="[icon.prefix || 'fas', icon.name]"></fa-icon>
+                            </ng-container>
+                        </div>
+                        <h4>{{ card.title }}</h4>
+                        <p>{{ card.description | slice:0:150 }}</p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>

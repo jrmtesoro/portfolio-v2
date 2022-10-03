@@ -1,0 +1,70 @@
+.about-me-container {
+  background-color: #cde8e8 !important;
+
+  h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 0.07rem;
+    color: var(--primary);
+  }
+
+  h4 {
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: var(--primary2);
+    letter-spacing: 0.04rem;
+  }
+
+  img {
+    max-width: 400px;
+    margin-left: 1rem !important;
+  }
+
+  .about-me-buttons {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  padding-left: 1.3rem;
+  font-weight: 700;
+  border-left: solid var(--primary2) 5px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.07rem;
+  color: var(--primary);
+}
+
+.section-description {
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--gray);
+}
+
+.what-i-do-container {
+  background-color: #fff !important;
+}
+
+.skill-card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px 12px 0;
+  .skill-icons-container {
+    margin-bottom: 0.3rem;
+    fa-icon {
+      font-size: 1.875rem;
+      margin-right: 6px;
+    }
+  }
+
+  h4 {
+    font-weight: 700;
+    color: var(--primary);
+  }
+}
+
+p {
+  color: var(--gray) !important;
+}
