@@ -1,0 +1,57 @@
+.navigation-container {
+  margin: 0;
+  padding: 0 2.5rem;
+  list-style: none;
+
+  .navigation-item {
+    padding: 0.7rem 0.3rem;
+    cursor: pointer;
+
+    .navigation-link {
+      display: flex;
+      align-items: flex-end;
+
+      h5 {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0;
+        letter-spacing: 0.09em;
+      }
+
+      mat-icon {
+        margin-right: 0.6rem;
+        font-size: 22px;
+
+        height: unset;
+        width: unset;
+      }
+    }
+  }
+
+  .nav-active {
+    h5,
+    mat-icon {
+      color: var(--primary2) !important;
+      font-weight: 700 !important;
+    }
+  }
+
+  .nav-inactive {
+    h5,
+    mat-icon {
+      color: var(--medium) !important;
+    }
+  }
+
+  .navigation-item:hover {
+    .nav-inactive {
+      h5,
+      mat-icon {
+        color: #fff !important;
+      }
+    }
+
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+  }
+}

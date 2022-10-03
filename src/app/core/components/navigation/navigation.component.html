@@ -1,0 +1,14 @@
+<ul class="navigation-container">
+    <ng-container *ngFor="let navigation of navigations">
+        <li class="navigation-item" [routerLink]="navigation.route">
+            <div class="navigation-link" [ngClass]="{
+                'nav-inactive': !navigation.active,
+                'nav-active': navigation.active
+            }" [matTooltipDisabled]="navigation.active" [matTooltip]="navigation.tooltip" matTooltipPosition="after"
+                matTooltipClass="custom-tooltip">
+                <mat-icon>{{ navigation.icon }}</mat-icon>
+                <h5>{{ navigation.label }}</h5>
+            </div>
+        </li>
+    </ng-container>
+</ul>
