@@ -1,0 +1,39 @@
+<section class="portfolio-header-container pt-6 pb-6 px-7 md:px-8">
+    <div class="portfolio-header-content mx-0 md:mx-0 lg:mx-0 xl:mx-8">
+        <h4>Portfolio</h4>
+        <p>{{ description | slice:0:230 }}</p>
+    </div>
+</section>
+<section class="portfolio-container pt-6 pb-6 px-7 md:px-8">
+    <div class="portfolio-content mx-0 md:mx-0 lg:mx-0 xl:mx-8">
+        <ul>
+            <ng-container *ngFor="let category of categories">
+                <li (click)="onCategoryClick(category)" [ngClass]="{
+                    'active': category.active
+                }">{{ category.label }}</li>
+            </ng-container>
+        </ul>
+
+        <div class="projects-container grid">
+            <ng-container *ngFor="let project of projects">
+                <div class="col-12 xl:col-6 mt-6">
+
+                    <div class="grid grid-nogutter">
+                        <div class="col-12 xl:col-5">
+                            <img [src]="project.imgSrc">
+                        </div>
+                        <div class="col-12 xl:col-7">
+                            <div class="project-description-container mt-2">
+                                <b>{{ project.title }}</b>
+                                <small>{{ project.description | slice:0:150 }}</small>
+                                <!-- <small></small> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </ng-container>
+
+        </div>
+    </div>
+</section>
