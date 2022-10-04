@@ -1,6 +1,6 @@
 import { trigger, transition, useAnimation } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { rotateGlueFromRight } from 'ngx-router-animations';
+import { moveFromRight } from 'ngx-router-animations';
 
 @Component({
   selector: 'app-landing',
@@ -8,7 +8,7 @@ import { rotateGlueFromRight } from 'ngx-router-animations';
   styleUrls: ['./landing.component.scss'],
   animations: [
     trigger('animationTranstion', [
-      transition('* => *', useAnimation(rotateGlueFromRight)),
+      transition('* => *', useAnimation(moveFromRight)),
     ]),
   ],
 })
